@@ -1,6 +1,3 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-
 //Import GraphQL dependencies and queries
 import {
   defaultClient as apolloClient
@@ -11,6 +8,8 @@ import {
   TOGGLE_COMPLETION,
   DELETE_TODO
 } from './queries';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
@@ -18,6 +17,7 @@ export default new Vuex.Store({
   state: {
     todos: [],
     loading: false
+
   },
   mutations: {
     setTodos: (state, payload) => {
@@ -45,6 +45,7 @@ export default new Vuex.Store({
         }
       }
     }
+
   },
   actions: {
 
@@ -139,4 +140,4 @@ export default new Vuex.Store({
     todos: state => state.todos,
     loading: state => state.loading
   }
-})
+}) 
